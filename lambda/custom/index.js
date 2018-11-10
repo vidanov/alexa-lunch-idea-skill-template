@@ -56,7 +56,7 @@ this.emit('GetLunchRecipeIntent'); },
 	this.emit(':tellWithCard', speechOutput, SKILL_NAME, randomLunch);
 },
 'AMAZON.RepeatIntent': function() {
-	this.response.speak(this.attributes.lastSpeech + "Would you like another lunch idea?").listen("Would you like another fact?");
+	this.response.speak(this.attributes.lastSpeech + `<break strength="x-strong"/>Would you like another lunch idea?`).listen("Would you like another idea?");
 	this.emit(':responseReady');
 
  },
